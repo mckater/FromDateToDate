@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block content %}
+<body>
+<h3> Выберите период пребывания: </h3>
+<form action="" method='POST' name="myform">
+    {{ form.csrt_token }}
+
+    {{ form.startdate.label }} {{form.startdate(class='datepicker')}} {{form.hidden_tag()}}
+    {{ form.starttime.label }} {{form.starttime(class='picker')}} {{form.hidden_tag()}}
+    {{ form.enddate.label }} {{form.enddate(class='datetimepicker')}} {{form.hidden_tag()}}
+    {{ form.endtime.label }} {{form.endtime(class='picker')}} {{form.hidden_tag()}}
+    <p>
+    {{form.submit()}}
+    </p>
+</form>
+</body>
+{% endblock %}
